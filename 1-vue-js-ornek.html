@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js | Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h3>{{ buttonTitle }}</h3>
+      <button>{{ title }}</button>
+      <p>{{paragraph}}</p>
+      <p v-text="paragraph"></p>
+      <a v-bind:href="link" v-bind:data-id="dataId">idc website </a>
+      <p v-html="details"></p>
+      
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          title: "test başlığı",
+          buttonTitle: "Tıklaa",
+          paragraph: "lorem ipsum dolor",
+          link: "https://ibrahimdenizcelik.com",
+          dataId: "1",
+          details : "<b>Bu bir detay</b>"
+        },
+      });
+    </script>
+  </body>
+</html>
